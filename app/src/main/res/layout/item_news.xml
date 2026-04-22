@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/newsImage"
+    android:layout_width="270dp"
+    android:layout_height="152dp"
+    android:layout_marginEnd="16dp"
+    android:scaleType="centerCrop"
+    android:background="@drawable/shape_rounded"
+    android:contentDescription="News banner" />
+
+
+<!--270 на 152-->

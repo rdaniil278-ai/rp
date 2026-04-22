@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <!-- Заголовок -->
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Создать проект"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Тип -->
+        <TextView
+            android:id="@+id/labelType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Тип"
+            android:textColor="#7E7E9A"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+        <TextView
+            android:id="@+id/spinnerType"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/shape_rounded"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:hint="Выберите тип"
+            android:paddingStart="14dp"
+            android:paddingEnd="48dp"
+            android:textColorHint="#999999"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/labelType"
+            app:layout_constraintTop_toBottomOf="@+id/labelType" />
+
+        <ImageView
+            android:id="@+id/arrowType"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="14dp"
+            android:src="@drawable/ic_select_gender"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnerType"
+            app:layout_constraintEnd_toEndOf="@+id/spinnerType"
+            app:layout_constraintTop_toTopOf="@+id/spinnerType"
+            app:tint="#999999" />
+
+        <LinearLayout
+            android:id="@+id/dropdownType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/spinnerType"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerType">
+
+            <TextView
+                android:id="@+id/typePersonal"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/shape_rounded"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp"
+                android:text="Личный"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/typeCommercial"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/shape_rounded"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:paddingStart="14dp"
+                android:text="Коммерческий"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/typeEducational"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/shape_rounded"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:paddingStart="14dp"
+                android:text="Учебный"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Название проекта -->
+        <TextView
+            android:id="@+id/labelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Название проекта"
+            android:textColor="#7E7E9A"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dropdownType" />
+
+        <EditText
+            android:id="@+id/editProjectName"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/shape_rounded"
+            android:hint="Введите название"
+            android:padding="14dp"
+            android:textColorHint="#999999"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/labelName"
+            app:layout_constraintTop_toBottomOf="@+id/labelName" />
+
+        <!-- Дата начала -->
+        <TextView
+            android:id="@+id/labelDateStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Дата начала"
+            android:textColor="#7E7E9A"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editProjectName" />
+
+        <EditText
+            android:id="@+id/editDateStart"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/shape_rounded"
+            android:hint="--.--.----"
+            android:inputType="date"
+            android:padding="14dp"
+            android:textColorHint="#999999"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/labelDateStart"
+            app:layout_constraintTop_toBottomOf="@+id/labelDateStart" />
+
+        <!-- Дата окончания -->
+        <TextView
+            android:id="@+id/labelDateEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Дата окончания"
+            android:textColor="#7E7E9A"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editDateStart" />
+
+        <EditText
+            android:id="@+id/editDateEnd"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/shape_rounded"
+            android:hint="--.--.----"
+            android:inputType="date"
+            android:padding="14dp"
+            android:textColorHint="#999999"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/labelDateEnd"
+            app:layout_constraintTop_toBottomOf="@+id/labelDateEnd" />
+
+        <!-- Размер -->
+        <TextView
+            android:id="@+id/labelSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Размер"
+            android:textColor="#7E7E9A"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editDateEnd" />
+
+        <EditText
+            android:id="@+id/editTextSize"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/shape_rounded"
+            android:hint="Например 1000 кв.м"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:textColorHint="#999999"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/labelSize"
+            app:layout_constraintTop_toBottomOf="@+id/labelSize" />
+
+        <!-- Описание -->
+        <TextView
+            android:id="@+id/labelSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Описание проекта"
+            android:textColor="#7E7E9A"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextSize" />
+
+        <EditText
+            android:id="@+id/editSource"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/shape_rounded"
+            android:hint="Введите описание"
+            android:inputType="textUri"
+            android:padding="14dp"
+            android:textColorHint="#999999"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/labelSource"
+            app:layout_constraintTop_toBottomOf="@+id/labelSource" />
+
+        <!-- Область для добавления изображения -->
+        <!-- Область для добавления изображения -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImage"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#EBEBEB"
+            app:strokeWidth="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editSource">
+
+            <ImageView
+                android:id="@+id/imagePreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_plus2" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Кнопка Подтвердить -->
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/shape_rounded_btn_enable"
+            android:text="Подтвердить"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardImage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

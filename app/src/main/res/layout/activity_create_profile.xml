@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="240dp"
+            android:layout_height="28dp"
+
+            android:layout_marginTop="66dp"
+            android:text="Создание Профиля"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="Без профиля вы не сможете создавать проекты."
+            android:textColor="#939396"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="В профиле будут храниться результаты проектов и ваши описания."
+            android:textColor="#939396"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+
+        <EditText
+            android:id="@+id/editTextFieldName"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="31dp"
+            android:background="@drawable/shape_rounded"
+            android:hint="Имя"
+            android:padding="14dp"
+            android:textColorHint="#999999"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView10"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+
+        <EditText
+            android:id="@+id/editTextFieldPatronomic"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/shape_rounded"
+            android:hint="Отчество"
+            android:padding="14dp"
+            android:textColorHint="#999999"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/editTextFieldName"
+            app:layout_constraintTop_toBottomOf="@+id/editTextFieldName" />
+
+
+        <EditText
+            android:id="@+id/editTextFieldSurname"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/shape_rounded"
+            android:hint="Фамилия"
+            android:padding="14dp"
+            android:textColorHint="#999999"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/editTextFieldPatronomic"
+            app:layout_constraintTop_toBottomOf="@+id/editTextFieldPatronomic" />
+
+        <EditText
+            android:id="@+id/editTextFieldDate"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/shape_rounded"
+            android:hint="Дата рождения"
+            android:inputType="date"
+            android:padding="14dp"
+            android:textColorHint="#999999"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/editTextFieldSurname"
+            app:layout_constraintTop_toBottomOf="@+id/editTextFieldSurname" />
+
+        <TextView
+            android:id="@+id/genderField"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/shape_rounded"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:hint="Пол"
+            android:paddingStart="14dp"
+            android:paddingEnd="48dp"
+            android:textColorHint="#999999"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/editTextFieldDate"
+            app:layout_constraintTop_toBottomOf="@+id/editTextFieldDate" />
+
+        <!-- Иконка стрелки (галочки) справа внутри поля -->
+        <ImageView
+            android:id="@+id/genderArrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="14dp"
+            android:src="@drawable/ic_select_gender"
+            app:layout_constraintBottom_toBottomOf="@+id/genderField"
+            app:layout_constraintEnd_toEndOf="@+id/genderField"
+            app:layout_constraintTop_toTopOf="@+id/genderField"
+            app:tint="#999999" />
+
+
+        <EditText
+            android:id="@+id/textFieldEmail"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="@drawable/shape_rounded"
+            android:hint="Почта"
+            android:padding="14dp"
+            android:textColorHint="#999999"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+
+
+            app:layout_constraintEnd_toEndOf="@+id/genderField"
+            app:layout_constraintStart_toStartOf="@+id/genderField"
+            app:layout_constraintTop_toBottomOf="@+id/genderField" />
+
+        <!-- выпадающее меню-->
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rounded_btn_background_create_card"
+            android:text="Далее"
+            android:textSize="17sp"
+            android:textStyle="italic"
+            app:backgroundTint='@null'
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="68dp"
+
+
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/genderField"
+            app:layout_constraintTop_toBottomOf="@+id/textFieldEmail" />
+
+        <LinearLayout
+            android:id="@+id/genderDropdown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/genderField"
+            app:layout_constraintTop_toBottomOf="@+id/genderField">
+
+            <TextView
+                android:id="@+id/maleOption"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/shape_rounded"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp"
+                android:text="Мужской"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/femaleOption"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/shape_rounded"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp"
+                android:text="Женский"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

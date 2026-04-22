@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Слой 1: Диагональный градиент (167.96deg) -->
+    <item>
+        <rotate android:fromDegrees="167.96">
+            <shape>
+                <gradient
+                    android:angle="0"
+                    android:startColor="#A1CAFF"
+                    android:centerColor="#4D9CFF"
+                    android:centerX="0.4896"
+                    android:endColor="#A1CAFF"
+                    android:type="linear" />
+            </shape>
+        </rotate>
+    </item>
+
+    <!-- Слой 2: Вертикальный градиент (180deg) -->
+    <item>
+        <shape>
+            <gradient
+                android:angle="270"
+                android:startColor="#74C8E4"
+                android:centerColor="#73D5BC"
+                android:centerY="0.5052"
+                android:endColor="#74C8E4"
+                android:type="linear" />
+        </shape>
+    </item>
+
+    <!-- Слой 3: Сложный градиент с прозрачностью -->
+    <item>
+        <shape>
+            <gradient
+                android:angle="270"
+                android:startColor="#0D6269F0"
+                android:centerColor="#A63740F5"
+                android:endColor="#0D6269F0"
+                android:type="linear" />
+        </shape>
+    </item>
+
+</layer-list>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="700dp"
+        >
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Введите пароль"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="144dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+            <ImageView
+                android:id="@+id/circle1"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_circle">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/circle2"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_circle">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/circle3"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_circle">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/circle4"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_circle">
+
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="288dp"
+            android:layout_height="392dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:id="@+id/row1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+
+                <Button
+                    android:id="@+id/num1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/number_background"
+                    app:backgroundTint="@null"
+                    android:text="1"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="24dp"
+                    />
+                <Button
+                    android:id="@+id/num2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/number_background"
+                    app:backgroundTint="@null"
+                    android:text="2"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="24dp"
+                    />
+                <Button
+                    android:id="@+id/num3"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/number_background"
+                    app:backgroundTint="@null"
+                    android:text="3"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp"
+                >
+
+                <Button
+                    android:id="@+id/num4"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/number_background"
+                    app:backgroundTint="@null"
+                    android:text="4"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="24dp"
+                    />
+                <Button
+                    android:id="@+id/num5"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/number_background"
+                    app:backgroundTint="@null"
+                    android:text="5"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="24dp"
+                    />
+                <Button
+                    android:id="@+id/num6"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/number_background"
+                    app:backgroundTint="@null"
+                    android:text="6"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp"
+                >
+
+                <Button
+                    android:id="@+id/num7"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/number_background"
+                    app:backgroundTint="@null"
+                    android:text="7"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="24dp"
+                    />
+                <Button
+                    android:id="@+id/num8"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/number_background"
+                    app:backgroundTint="@null"
+                    android:text="8"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="24dp"
+                    />
+                <Button
+                    android:id="@+id/num9"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/number_background"
+                    app:backgroundTint="@null"
+                    android:text="9"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row4"
+                android:layout_width="288dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+
+                <Button
+                    android:id="@+id/num0"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="46dp"
+                    android:layout_marginStart="104dp"
+                    android:background="@drawable/number_background"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:backgroundTint="@null" />
+
+                <ImageButton
+                    android:id="@+id/delete_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_delete"
+                    app:backgroundTint="@null"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
