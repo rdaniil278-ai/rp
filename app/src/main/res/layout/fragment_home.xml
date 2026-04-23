@@ -26,12 +26,12 @@
             android:drawablePadding="8dp"
             android:gravity="center_vertical"
             android:hint="Искать описания"
-            android:paddingStart="14dp"
-            android:paddingEnd="14dp"
-            android:textSize="16sp"
             android:inputType="text"
             android:imeOptions="actionSearch"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
             android:singleLine="true"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -49,8 +49,7 @@
             app:layout_constraintStart_toStartOf="@+id/editText"
             app:layout_constraintTop_toBottomOf="@+id/editText" />
 
-        <!-- Каталог описаний -->
-
+        <!-- RecyclerView для новостей -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/newsRecyclerView"
             android:layout_width="0dp"
@@ -59,7 +58,6 @@
             android:clipToPadding="false"
             android:paddingEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/textView12"
             app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -75,64 +73,55 @@
             app:layout_constraintStart_toStartOf="@+id/newsRecyclerView"
             app:layout_constraintTop_toBottomOf="@+id/newsRecyclerView" />
 
-        <!-- Фильтры (горизонтальный скролл) -->
-        <HorizontalScrollView
-            android:id="@+id/horizontalScrollView2"
+        <!-- Фильтры -->
+        <LinearLayout
+            android:id="@+id/filterLayout"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginTop="12dp"
-            android:scrollbars="none"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textView13"
             app:layout_constraintTop_toBottomOf="@+id/textView13">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/filterAll"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/shape_rounded_btn_enable"
+                android:gravity="center"
+                android:text="Все"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
 
-                <TextView
-                    android:id="@+id/filterAll"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="12dp"
-                    android:background="@drawable/shape_rounded_back_disable"
-                    android:gravity="center"
-                    android:paddingStart="20dp"
-                    android:paddingEnd="20dp"
-                    android:text="Все"
-                    android:textColor="#7E7E9A"
-                    android:textSize="15sp" />
+            <TextView
+                android:id="@+id/filterWomen"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/shape_rounded_back_disable"
+                android:gravity="center"
+                android:text="Женщинам"
+                android:textColor="#7E7E9A"
+                android:textSize="15sp" />
 
-                <TextView
-                    android:id="@+id/filterWomen"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="12dp"
-                    android:background="@drawable/shape_rounded_back_disable"
-                    android:gravity="center"
-                    android:paddingStart="20dp"
-                    android:paddingEnd="20dp"
-                    android:text="Женщинам"
-                    android:textColor="#7E7E9A"
-                    android:textSize="15sp" />
+            <TextView
+                android:id="@+id/filterMen"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape_rounded_back_disable"
+                android:gravity="center"
+                android:text="Мужчинам"
+                android:textColor="#7E7E9A"
+                android:textSize="15sp" />
 
-                <TextView
-                    android:id="@+id/filterMen"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/shape_rounded_back_disable"
-                    android:gravity="center"
-                    android:paddingStart="20dp"
-                    android:paddingEnd="20dp"
-                    android:text="Мужчинам"
-                    android:textColor="#7E7E9A"
-                    android:textSize="15sp" />
+        </LinearLayout>
 
-            </LinearLayout>
-        </HorizontalScrollView>
-
+        <!-- RecyclerView для товаров -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/productsRecyclerView"
             android:layout_width="0dp"
@@ -141,7 +130,7 @@
             android:nestedScrollingEnabled="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2" />
+            app:layout_constraintTop_toBottomOf="@+id/filterLayout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
